@@ -33,6 +33,6 @@ jobs:
           path: dist/
       - uses: aws-actions/configure-aws-credentials@v6
         with:
-          role-to-assume: arn:aws:iam::<account-id>:role/<your-deploy-role>
+          role-to-assume: arn:aws:iam::604775478155:role/github-actions-deploy-role
           aws-region: us-east-1
-      - run: aws s3 sync dist/ s3://<example-bucket>/ --delete
+      - run: aws s3 sync dist/ s3://cicd-service-abul-yousuf/ --delete
